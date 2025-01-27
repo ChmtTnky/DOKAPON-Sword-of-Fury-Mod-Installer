@@ -25,7 +25,7 @@ MyMod
 -> Hex
   -> MoldeNerf.hex
 ```
-### Asset Mods
+### Assets
 The installer will treat the Assets folder as though it has the same folder structure as the "GameData\\app" folder in your game's installation. Every new file must have the same location and name as the file you wish to overwrite. The encoding and preparation of each file is left up to the modder, with the installation automating the process of moving the modded files into the game.
 
 ### Sounds
@@ -40,12 +40,12 @@ NOTE: Sound files will NOT play at all if the loop comments are missing. Music f
 
 After reading the loop data, the installer will use FFMPEG to convert your mod file into a WAV file, then into an OPUS file with the loop data baked in. It will then be written to the correct PCK file. As such, you do not have to do any work other providing a sound file and its loop data, with the installer doing the rest for you.
 
-### Video Mods
+### Video
 The installer will get every file in the Video folder, assign each file with an OGV file to overwrite (if one exists), then convert each video into an OGV file using FFMPEG and VLC. Resizing and reformatting the video is done automatically by the installer. As such, all you must do is provide a video file with a name that matches an existing OVG file, and the installer will apply it with the correct settings.
 
 WARNING: Sometimes the game crashes when playing custom videos. I don't know why this happens, but it has only occurred with longer videos. You can avoid this my skipping the video when the game attempts to play it.
 
-### Hex Mods
+### Hex
 The installer will search the Hex folder for all ".hex" files, and use the information contained in them to apply hex edits to the game's executable. The HEX format has the following specification:
 ```
  8 bytes: Starting offset

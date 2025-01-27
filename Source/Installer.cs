@@ -533,7 +533,7 @@ namespace Sword_of_Fury_Mod_Installer
                 {
                     FileName = Path.Combine(HELPER_EXE_DIR_NAME, "vlc", "vlc.exe"),
                     Arguments = $"--no-repeat --no-loop -I dummy {converted_mp4_path} " +
-								$"--sout-theora-quality=10 --sout-vorbis-quality=5 " + 
+								$"--sout-theora-quality=8 --sout-vorbis-quality=4 " + 
 								$"--sout=#transcode{{vcodec=\"theo\",acodec=\"vorb\",\"channels=2\"}}:" +
 								$"standard{{access=\"file\",mux=\"ogg\",dst=\"{converted_ogv_path}\"}} " +
 								$"vlc://quit",

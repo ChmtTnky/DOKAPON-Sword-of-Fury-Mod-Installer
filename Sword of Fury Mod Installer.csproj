@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<OutputType>Exe</OutputType>
+	<TargetFramework>net8.0</TargetFramework>
+	<RootNamespace>Sword_of_Fury_Mod_Installer</RootNamespace>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="RequiredEXEs\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="RequiredEXEs\**">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Mods\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FFMpegCore" Version="5.1.0" />
+		<PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="Mods\**">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>

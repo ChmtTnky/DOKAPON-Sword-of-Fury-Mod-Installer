@@ -36,6 +36,8 @@ number string for end of loop in samples
 ```
 Essentially, a ".loop" file contains two lines of text, where each line is just a number that tells the installer the position in samples of a loop endpoint. The format contains nothing else. If a line is empty, then the specific comment will be omitted, which may be necessary for some sound files.
 
+NOTE: Sound files will NOT play at all if the loop comments are missing. Music files need both, while sound effects need a LoopEnd only.
+
 After reading the loop data, the installer will use FFMPEG to convert your mod file into a WAV file, then into an OPUS file with the loop data baked in. It will then be written to the correct PCK file. As such, you do not have to do any work other providing a sound file and its loop data, with the installer doing the rest for you.
 
 ### Video Mods
